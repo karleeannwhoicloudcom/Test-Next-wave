@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Next Wave Swim | Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Next Wave Miami | Swim Lessons for Kids</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Next Wave Swim</h1>
-    <p>Building Confidence in the Water, One Wave at a Time</p>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="payment.html">Payment Plans</a></li>
-        <li><a href="join.html">Join Our Team</a></li>
+
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Next Wave Miami</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#safety">Safety</a></li>
+        <li><a href="#packages">Packages</a></li>
         <li><a href="booking.html">Book Now</a></li>
       </ul>
     </nav>
+    <div class="hero-text">
+      <h1>Building Water Confidence</h1>
+      <p>Trusted swim instruction for kids of all ages</p>
+      <a href="#packages" class="cta-btn">Explore Packages</a>
+    </div>
   </header>
+
   <main>
-    <section>
-      <h2>Welcome!</h2>
-      <p>We offer high-quality swim instruction in the Miami area. Join us in helping swimmers of all levels thrive in the water!</p>
+    <section id="about" class="info-section">
+      <h2>About Us</h2>
+      <p>Next Wave Miami is a trusted swim academy focused on empowering children with life-saving water skills. Meet our passionate instructors and explore our story on the <a href="about.html">About Us page</a>.</p>
+    </section>
+
+    <section id="safety" class="safety-facts">
+      <h2>💧 Safety First</h2>
+      <div class="facts-grid">
+        <div class="fact-card">🏊‍♀️ <strong>Survival First:</strong> Kids learn life-saving float and breath control skills before freestyle.</div>
+        <div class="fact-card">👨‍👩‍👧 <strong>Low Student Ratio:</strong> Small group sizes ensure safe supervision and personal instruction.</div>
+        <div class="fact-card">🧠 <strong>Progress by Confidence:</strong> Kids move to new levels when they’re ready—never rushed.</div>
+      </div>
+    </section>
+
+    <section id="visuals" class="gallery">
+      <h2>See the Joy in Action</h2>
+      <div class="image-grid">
+        <img src="images/kid1.jpg" alt="Child learning to float">
+        <img src="images/kid2.jpg" alt="Coach and toddler in pool">
+        <img src="images/kid3.jpg" alt="Smiling swimmers">
+      </div>
+    </section>
+
+    <section id="packages" class="packages-section">
+      <h2>Our Lesson Packages</h2>
+      <div class="package-cards">
+        <div class="card">
+          <h3>🌊 Tiny Waves (6mo-3yrs)</h3>
+          <p>Parent-child intro classes focused on fun & water comfort.</p>
+        </div>
+        <div class="card">
+          <h3>🏅 Safety Swimmers</h3>
+          <p>Kids 4+ learn independent floating, rolling & kicking basics.</p>
+        </div>
+        <div class="card">
+          <h3>🎯 Stroke Ready</h3>
+          <p>Swimmers refine technique across all 4 strokes with games.</p>
+        </div>
+      </div>
+      <a href="pricing.html" class="cta-btn">View Full Pricing</a>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 Next Wave Swim | Miami, FL</p>
+    <p>&copy; 2025 Next Wave Miami | Empowering Little Swimmers 💦</p>
   </footer>
+
 </body>
 </html>
