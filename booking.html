@@ -60,7 +60,7 @@
       });
 
       try {
-        const response = await fetch('https://test-next-wave.onrender.com', {
+        const res = await fetch('https://test-next-wave.onrender.com/api/book', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
