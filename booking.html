@@ -1,26 +1,80 @@
-<script>
-  document.getElementById('bookingForm').addEventListener('submit', async e => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Book a Swim Lesson | Next Wave Miami</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f2faff; max-width: 600px; margin: auto; }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    input, select, textarea, button { width: 100%; padding: 0.5rem; margin-top: 0.3rem; border-radius: 4px; border: 1px solid #ccc; }
+    button { background: #007BFF; color: white; font-size: 1.1rem; border: none; cursor: pointer; margin-top: 1.5rem; }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
 
-    const data = {};
-    formData.forEach((value, key) => {
-      if (data[key]) {
-        data[key] = Array.isArray(data[key]) ? [...data[key], value] : [data[key], value];
-      } else {
-        data[key] = value;
+  <h1>Book Your Swim Lesson</h1>
+
+  <form id="bookingForm">
+    <label for="swimmer_name">Swimmer's Full Name:</label>
+    <input type="text" id="swimmer_name" name="swimmer_name" required />
+
+    <label for="swimmer_age">Age:</label>
+    <input type="number" id="swimmer_age" name="swimmer_age" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="lesson_package">Lesson Package:</label>
+    <select id="lesson_package" name="lesson_package">
+      <option>First Splash</option>
+      <option>Super Swimmer ($450)</option>
+      <option>Deep Diver</option>
+      <option>Custom</option>
+    </select>
+
+    <label for="custom_details">If Custom, specify:</label>
+    <input type="text" id="custom_details" name="custom_details" />
+
+    <button type="submit">Submit Booking</button>
+  </form>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', async e => {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const data = {};
+
+      formData.forEach((value, key) => {
+        if (data[key]) {
+          data[key] = Array.isArray(data[key]) ? [...data[key], value] : [data[key], value];
+        } else {
+          data[key] = value;
+        }
+      });
+
+      try {
+        const response = await fetch('http://localhost:3000/api/book', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        alert(result.message || 'Submission sent!');
+        form.reset();
+      } catch (error) {
+        alert('Submission failed. Please try again.');
+        console.error(error);
       }
     });
+  </script>
 
-    const res = await fetch('http://localhost:3000/api/book', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
-
-    const msg = await res.json();
-    alert(msg.message || "Submission sent!");
-    form.reset();
-  });
-</script>
+</body>
+</html>
