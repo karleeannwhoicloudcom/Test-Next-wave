@@ -5,6 +5,17 @@
   <title>Book a Lesson | Next Wave Miami</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #f2faff; }
+    form { max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { text-align: center; }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 0.5rem; margin-top: 0.3rem; border-radius: 4px; border: 1px solid #ccc; }
+    .checkbox-group { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .checkbox-group label { font-weight: normal; }
+    button { margin-top: 2rem; padding: 1rem; width: 100%; background: #007BFF; color: white; font-size: 1rem; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+  </style>
 </head>
 <body>
 
@@ -25,145 +36,135 @@
   </header>
 
   <main class="booking-section">
-  <section class="booking-link-box">
-    <h2>✨ Booking Made Easy</h2>
-    <p>Click below to schedule your first swim session or consultation via our booking portal.</p>
+    <section class="booking-link-box">
+      <h2>✨ Booking Made Easy</h2>
+      <p>Click below to schedule your first swim session or consultation via our booking portal.</p>
 
-    <div class="no-pool-message">
-      <h3>🚫 No Pool? No Problem!</h3>
-      <p>Don’t have a pool? We’ve got trusted access to local partner pools around Miami!</p>
-    </div>
+      <div class="no-pool-message">
+        <h3>🚫 No Pool? No Problem!</h3>
+        <p>Don’t have a pool? We’ve got trusted access to local partner pools around Miami!</p>
+      </div>
+    </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Next Wave Miami - Swim Lesson Booking</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; background: #f2faff; }
-    form { max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h2 { text-align: center; }
-    label { display: block; margin-top: 1rem; font-weight: bold; }
-    input, select, textarea { width: 100%; padding: 0.5rem; margin-top: 0.3rem; border-radius: 4px; border: 1px solid #ccc; }
-    .checkbox-group { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .checkbox-group label { font-weight: normal; }
-    button { margin-top: 2rem; padding: 1rem; width: 100%; background: #007BFF; color: white; font-size: 1rem; border: none; border-radius: 5px; cursor: pointer; }
-    button:hover { background: #0056b3; }
-  </style>
-</head>
-<body>
-  <form id="bookingForm">
-    <h2>Swim Lesson Booking Form</h2>
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+      <form id="bookingForm">
+        <h2>Swim Lesson Booking Form</h2>
 
-    <label>Swimmer's Full Name: <input name="swimmer_name" required></label>
-    <label>Age: <input name="swimmer_age" type="number" required></label>
-    <label>Parent/Guardian Name: <input name="parent_name"></label>
+        <label>Swimmer's Full Name: <input name="swimmer_name" required></label>
+        <label>Age: <input name="swimmer_age" type="number" required></label>
+        <label>Parent/Guardian Name: <input name="parent_name"></label>
 
-    <label>Email Address: <input type="email" name="email" required></label>
-    <label>Phone Number: <input name="phone" required></label>
-    <label>Best time to contact you: <input name="contact_time"></label>
+        <label>Email Address: <input type="email" name="email" required></label>
+        <label>Phone Number: <input name="phone" required></label>
+        <label>Best time to contact you: <input name="contact_time"></label>
 
-    <label>Lesson Package:</label>
-    <select name="lesson_package">
-      <option>First Splash</option>
-      <option>Super Swimmer ($450)</option>
-      <option>Deep Diver</option>
-      <option>Custom</option>
-    </select>
-    <label>If Custom, specify: <input name="custom_details"></label>
+        <label>Lesson Package:</label>
+        <select name="lesson_package">
+          <option>First Splash</option>
+          <option>Super Swimmer ($450)</option>
+          <option>Deep Diver</option>
+          <option>Custom</option>
+        </select>
+        <label>If Custom, specify: <input name="custom_details"></label>
 
-    <label>Lesson Frequency:</label>
-    <div class="checkbox-group">
-      <label><input type="checkbox" name="frequency" value="1x"> 1 lesson/week</label>
-      <label><input type="checkbox" name="frequency" value="2x"> 2 lessons/week</label>
-      <label><input type="checkbox" name="frequency" value="3x"> 3 lessons/week</label>
-      <label><input type="checkbox" name="frequency" value="4x"> 4 lessons/week</label>
-      <label><input type="checkbox" name="frequency" value="5x"> 5 lessons/week</label>
-      <label><input type="checkbox" name="frequency" value="6x"> 6 lessons/week</label>
-      <label><input type="checkbox" name="frequency" value="7x"> 7 lessons/week</label>
-    </div>
+        <label>Lesson Frequency:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="frequency" value="1x"> 1 lesson/week</label>
+          <label><input type="checkbox" name="frequency" value="2x"> 2 lessons/week</label>
+          <label><input type="checkbox" name="frequency" value="3x"> 3 lessons/week</label>
+          <label><input type="checkbox" name="frequency" value="4x"> 4 lessons/week</label>
+          <label><input type="checkbox" name="frequency" value="5x"> 5 lessons/week</label>
+          <label><input type="checkbox" name="frequency" value="6x"> 6 lessons/week</label>
+          <label><input type="checkbox" name="frequency" value="7x"> 7 lessons/week</label>
+        </div>
 
-    <label>Preferred Start Date: <input type="date" name="start_date"></label>
+        <label>Preferred Start Date: <input type="date" name="start_date"></label>
 
-    <label>Available Days:</label>
-    <div class="checkbox-group">
-      <label><input type="checkbox" name="days" value="Mon"> Monday</label>
-      <label><input type="checkbox" name="days" value="Tue"> Tuesday</label>
-      <label><input type="checkbox" name="days" value="Wed"> Wednesday</label>
-      <label><input type="checkbox" name="days" value="Thu"> Thursday</label>
-      <label><input type="checkbox" name="days" value="Fri"> Friday</label>
-      <label><input type="checkbox" name="days" value="Sat"> Saturday</label>
-      <label><input type="checkbox" name="days" value="Sun"> Sunday</label>
-    </div>
+        <label>Available Days:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="days" value="Mon"> Monday</label>
+          <label><input type="checkbox" name="days" value="Tue"> Tuesday</label>
+          <label><input type="checkbox" name="days" value="Wed"> Wednesday</label>
+          <label><input type="checkbox" name="days" value="Thu"> Thursday</label>
+          <label><input type="checkbox" name="days" value="Fri"> Friday</label>
+          <label><input type="checkbox" name="days" value="Sat"> Saturday</label>
+          <label><input type="checkbox" name="days" value="Sun"> Sunday</label>
+        </div>
 
-    <label>Time Slots:</label>
-    <div class="checkbox-group">
-      <label><input type="checkbox" name="timeslot" value="6-9 AM"> Early Morning</label>
-      <label><input type="checkbox" name="timeslot" value="9-12 PM"> Morning</label>
-      <label><input type="checkbox" name="timeslot" value="12-3 PM"> Afternoon</label>
-      <label><input type="checkbox" name="timeslot" value="3-6 PM"> Late Afternoon</label>
-      <label><input type="checkbox" name="timeslot" value="6-8 PM"> Evening</label>
-    </div>
+        <label>Time Slots:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="timeslot" value="6-9 AM"> Early Morning</label>
+          <label><input type="checkbox" name="timeslot" value="9-12 PM"> Morning</label>
+          <label><input type="checkbox" name="timeslot" value="12-3 PM"> Afternoon</label>
+          <label><input type="checkbox" name="timeslot" value="3-6 PM"> Late Afternoon</label>
+          <label><input type="checkbox" name="timeslot" value="6-8 PM"> Evening</label>
+        </div>
 
-    <label>Specific time preferences: <input name="specific_time"></label>
+        <label>Specific time preferences: <input name="specific_time"></label>
 
-    <label>Schedule Flexibility:</label>
-    <select name="flexibility">
-      <option>Very flexible</option>
-      <option>Somewhat flexible</option>
-      <option>Limited flexibility</option>
-      <option>Fixed schedule only</option>
-    </select>
+        <label>Schedule Flexibility:</label>
+        <select name="flexibility">
+          <option>Very flexible</option>
+          <option>Somewhat flexible</option>
+          <option>Limited flexibility</option>
+          <option>Fixed schedule only</option>
+        </select>
 
-    <label>Pool Address: <input name="pool_address"></label>
-    <label>Pool Type:</label>
-    <select name="pool_type">
-      <option>Home Pool</option>
-      <option>Community Pool</option>
-      <option>Public Pool</option>
-      <option>Members-Only Pool</option>
-      <option>Other</option>
-    </select>
-    <label><input type="checkbox" name="no_pool"> I don't have pool access</label>
+        <label>Pool Address: <input name="pool_address"></label>
+        <label>Pool Type:</label>
+        <select name="pool_type">
+          <option>Home Pool</option>
+          <option>Community Pool</option>
+          <option>Public Pool</option>
+          <option>Members-Only Pool</option>
+          <option>Other</option>
+        </select>
+        <label><input type="checkbox" name="no_pool"> I don't have pool access</label>
 
-    <label>Swimming Experience:</label>
-    <select name="experience">
-      <option>Complete beginner</option>
-      <option>Some experience</option>
-      <option>Intermediate</option>
-      <option>Advanced</option>
-    </select>
+        <label>Swimming Experience:</label>
+        <select name="experience">
+          <option>Complete beginner</option>
+          <option>Some experience</option>
+          <option>Intermediate</option>
+          <option>Advanced</option>
+        </select>
 
-    <label>Special Considerations: <textarea name="special_needs"></textarea></label>
-    <label>Previous swimming lessons? 
-      <select name="prior_lessons">
-        <option>Yes</option>
-        <option>No</option>
-      </select>
-    </label>
-    <label>If yes, describe: <textarea name="lesson_history"></textarea></label>
+        <label>Special Considerations: <textarea name="special_needs"></textarea></label>
+        <label>Previous swimming lessons?
+          <select name="prior_lessons">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+        <label>If yes, describe: <textarea name="lesson_history"></textarea></label>
 
-    <label>Payment Preference:</label>
-    <select name="payment">
-      <option>Full payment upfront</option>
-      <option>Payment plan</option>
-    </select>
+        <label>Payment Preference:</label>
+        <select name="payment">
+          <option>Full payment upfront</option>
+          <option>Payment plan</option>
+        </select>
 
-    <label>How did you hear about us?</label>
-    <div class="checkbox-group">
-      <label><input type="checkbox" name="referral" value="Instagram"> Instagram</label>
-      <label><input type="checkbox" name="referral" value="Facebook"> Facebook</label>
-      <label><input type="checkbox" name="referral" value="Google"> Google Search</label>
-      <label><input type="checkbox" name="referral" value="Referral"> Referral</label>
-      <label><input type="checkbox" name="referral" value="Event"> Event</label>
-      <label><input type="text" name="referral_other" placeholder="Other..."></label>
-    </div>
+        <label>How did you hear about us?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="referral" value="Instagram"> Instagram</label>
+          <label><input type="checkbox" name="referral" value="Facebook"> Facebook</label>
+          <label><input type="checkbox" name="referral" value="Google"> Google Search</label>
+          <label><input type="checkbox" name="referral" value="Referral"> Referral</label>
+          <label><input type="checkbox" name="referral" value="Event"> Event</label>
+          <label><input type="text" name="referral_other" placeholder="Other..."></label>
+        </div>
 
-    <label>Questions or Special Requests: <textarea name="questions"></textarea></label>
+        <label>Questions or Special Requests: <textarea name="questions"></textarea></label>
 
-    <button type="submit">Submit Booking</button>
-  </form>
+        <button type="submit">Submit Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Next Wave Miami | Questions? Text <a href="tel:3059005941">305‑900‑5941</a></p>
+  </footer>
 
   <script>
     document.getElementById('bookingForm').addEventListener('submit', async e => {
@@ -192,12 +193,6 @@
       form.reset();
     });
   </script>
-</body>
-</html>
-
-  <footer>
-    <p>&copy; 2025 Next Wave Miami | Questions? Text <a href="tel:3059005941">305‑900‑5941</a></p>
-  </footer>
 
 </body>
 </html>
